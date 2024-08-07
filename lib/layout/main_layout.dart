@@ -22,6 +22,7 @@ class MainLayout extends StatelessWidget {
             ),
             body: cubit.screens[cubit.currentIndex],
             bottomNavigationBar: BottomNavigationBar(
+              showSelectedLabels: false,
               showUnselectedLabels: false,
               currentIndex: cubit.currentIndex,
               onTap: (index) {
@@ -29,8 +30,8 @@ class MainLayout extends StatelessWidget {
               },
               items: const [
                 BottomNavigationBarItem(
-                    activeIcon: Icon(Icons.home_filled),
-                    icon: Icon(Icons.home_outlined),
+                    activeIcon: Icon(Icons.house),
+                    icon: Icon(Icons.house_outlined),
                     label: ''),
                 BottomNavigationBarItem(
                     activeIcon: Icon(Icons.account_balance_wallet_sharp),
@@ -41,8 +42,8 @@ class MainLayout extends StatelessWidget {
                     icon: Icon(Icons.analytics_outlined),
                     label: ''),
                 BottomNavigationBarItem(
-                    activeIcon: Icon(Icons.account_circle_rounded),
-                    icon: Icon(Icons.account_circle_outlined),
+                    activeIcon: Icon(Icons.person),
+                    icon: Icon(Icons.person_outline),
                     label: ''),
               ],
             ),
