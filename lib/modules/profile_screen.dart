@@ -67,7 +67,7 @@ class ProfileScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    buildProfileButton(action: (){}, icon:Icons.support_agent_rounded, text: 'Help'),
+                    buildProfileButton(action: (){}, icon:Icons.support_agent_rounded, text: 'Contact Us'),
                     const SizedBox(width: 20,),
                     buildProfileButton(action: (){}, icon: Icons.logout, text: 'Logout',iconColor: Colors.red.withAlpha(200)),
                   ],
