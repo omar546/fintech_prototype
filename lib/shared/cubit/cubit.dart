@@ -9,8 +9,7 @@ import '../../modules/wallet_screen.dart';
 
 class AppCubit extends Cubit<AppStates> {
   AppCubit() : super(AppInitialState());
-
-  static AppCubit get(context) => BlocProvider.of(context);
+  static AppCubit get(BuildContext context) => BlocProvider.of<AppCubit>(context);
   //VARS
   var currentIndex = 0;
   List<Widget> screens = [
@@ -21,7 +20,9 @@ class AppCubit extends Cubit<AppStates> {
   ];
   //NAV
   Future<void> changeBottomNavBarState(index) async {
+    if (index != currentIndex) {
     currentIndex = index;
     emit(AppChangeNavBarState());
+    }
   }
 }
