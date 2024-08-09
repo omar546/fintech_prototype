@@ -38,14 +38,14 @@ ThemeData lightTheme = ThemeData(
       elevation: 30,
       backgroundColor: Styles.whiteColor,
       type: BottomNavigationBarType.fixed,
-      selectedItemColor: Styles.prussian,
+      selectedItemColor: Styles.blackColor,
       unselectedItemColor: Styles.greyColor,
       selectedLabelStyle: TextStyle(fontFamily: 'quicksand'),
     ),
     appBarTheme: const AppBarTheme(
-      iconTheme: IconThemeData(color: Styles.prussian),
+      iconTheme: IconThemeData(color: Styles.blackColor),
       systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarColor: Styles.whiteColor,
+        statusBarColor: Styles.greyColor,
         statusBarIconBrightness: Brightness.dark,
       ),
       backgroundColor: Styles.whiteColor,
@@ -61,7 +61,7 @@ ThemeData lightTheme = ThemeData(
           color: Styles.blackColor.withOpacity(0.5), fontFamily: 'quicksand'),
     ),
     inputDecorationTheme: InputDecorationTheme(
-      prefixIconColor: Styles.prussian,
+      prefixIconColor: Styles.blackColor,
       suffixIconColor: Styles.greyColor.withOpacity(0.5),
       labelStyle: const TextStyle(color: Styles.blackColor),
     ));

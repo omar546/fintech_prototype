@@ -1,4 +1,5 @@
 import 'package:fintech_prototype/shared/components/widgets.dart';
+import 'package:fintech_prototype/shared/styles/colors.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -7,7 +8,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black.withAlpha(15),
+      backgroundColor: Styles.greyColor,
       body: Center(
           child: Column(
         children: [
