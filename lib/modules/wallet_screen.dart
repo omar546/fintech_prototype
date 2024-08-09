@@ -22,13 +22,16 @@ class WalletScreen extends StatelessWidget {
                   backgroundColor: Colors.white24,
                   surfaceTintColor: Colors.transparent,
                   elevation: 0,
-                  leading: Padding(
-                    padding: const EdgeInsets.all(13.0),
-                    child: ClipOval(
-                      child: Image.asset(
-                        'assets/avatar_147133.png',
-                        fit: BoxFit.cover,
-                      ),),
+                  leading: GestureDetector(
+                    onTap: (){AppCubit.get(context).changeBottomNavBarState(3);},
+                    child: Padding(
+                      padding: const EdgeInsets.all(13.0),
+                      child: ClipOval(
+                        child: Image.asset(
+                          'assets/avatar_147133.png',
+                          fit: BoxFit.cover,
+                        ),),
+                    ),
                   ),
                   title: const Center(
                     child: Column(

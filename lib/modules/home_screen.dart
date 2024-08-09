@@ -22,29 +22,35 @@ class HomeScreen extends StatelessWidget {
                   backgroundColor: Colors.white24,
                   surfaceTintColor: Colors.transparent,
                   elevation: 0,
-                  leading: Padding(
-                    padding: const EdgeInsets.all(13.0),
-                    child: ClipOval(
-                      child: Image.asset(
-                        'assets/avatar_147133.png',
-                        fit: BoxFit.cover,
-                      ),),
+                  leading: GestureDetector(
+                    onTap: (){AppCubit.get(context).changeBottomNavBarState(3);},
+                    child:  Padding(
+                      padding: const EdgeInsets.all(13.0),
+                      child: ClipOval(
+                        child: Image.asset(
+                          'assets/avatar_147133.png',
+                          fit: BoxFit.cover,
+                        ),),
+                    ),
                   ),
                   titleSpacing: 0,
-                  title: const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Good Morning!',
-                        style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.w300),
-                      ),
-                      Text(
-                        'Client Name',
-                        style: TextStyle(
-                            fontSize: 17, fontWeight: FontWeight.bold),
-                      )
-                    ],
+                  title: GestureDetector(
+                    onTap: (){AppCubit.get(context).changeBottomNavBarState(3);},
+                    child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Good Morning!',
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w300),
+                        ),
+                        Text(
+                          'Client Name',
+                          style: TextStyle(
+                              fontSize: 17, fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
                   ),
                   actions: [
                     Padding(
