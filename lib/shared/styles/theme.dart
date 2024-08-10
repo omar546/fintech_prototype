@@ -32,6 +32,10 @@ class ThemeCubit extends Cubit<ThemeData> {
 }
 
 ThemeData lightTheme = ThemeData(
+    textButtonTheme: TextButtonThemeData(
+        style: ButtonStyle(
+      foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+    )),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       elevation: 30,
       backgroundColor: Styles.whiteColor,

@@ -218,6 +218,38 @@ class HomeScreen extends StatelessWidget {
                           ))
                         ]),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.only(top:20,bottom:20,left: 30.0,right: 15),
+                        child:  Row(mainAxisAlignment:MainAxisAlignment.spaceBetween,children: [
+                          const Text(
+                            'Earnings',
+                            style: TextStyle(
+                                fontSize: 17, fontWeight: FontWeight.bold),
+                          ),
+                          TextButton(onPressed: (){}, child: const Text('See All',style: TextStyle(fontWeight: FontWeight.bold),))
+
+                        ],),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top:20,left: 30.0,right: 15),
+                        child:  Row(mainAxisAlignment:MainAxisAlignment.spaceBetween,children: [
+                          const Text(
+                            'Transactions',
+                            style: TextStyle(
+                                fontSize: 17, fontWeight: FontWeight.bold),
+                          ),
+                          TextButton(onPressed: (){}, child: const Text('See All',style: TextStyle(fontWeight: FontWeight.bold),))
+
+                        ],),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(bottom:20,left: 30.0),
+                        child: Text(
+                          'Today',
+                          style: TextStyle(
+                              fontSize: 17,color: Colors.grey, fontWeight: FontWeight.w600),
+                        ),
+                      ),
                       Container(
                         height: 1000,
                         color: Colors.white24,
@@ -257,7 +289,7 @@ class BalanceCustomPainter extends CustomPainter {
     path_0.close();
 
     Paint paint_0_fill = Paint()..style = PaintingStyle.fill;
-    paint_0_fill.color = Color(0xff377CC8).withOpacity(1.0);
+    paint_0_fill.color = const Color(0xff377CC8).withOpacity(1.0);
     canvas.drawPath(path_0, paint_0_fill);
 
     Path path_1 = Path();
@@ -283,7 +315,7 @@ class BalanceCustomPainter extends CustomPainter {
     path_1.close();
 
     Paint paint_1_fill = Paint()..style = PaintingStyle.fill;
-    paint_1_fill.color = Color(0xff242424).withOpacity(1.0);
+    paint_1_fill.color = const Color(0xff242424).withOpacity(1.0);
     canvas.drawPath(path_1, paint_1_fill);
 
     Path path_2 = Path();
@@ -298,7 +330,7 @@ class BalanceCustomPainter extends CustomPainter {
     path_2.close();
 
     Paint paint_2_fill = Paint()..style = PaintingStyle.fill;
-    paint_2_fill.color = Color(0xffEBB850).withOpacity(1.0);
+    paint_2_fill.color = const Color(0xffEBB850).withOpacity(1.0);
     canvas.drawPath(path_2, paint_2_fill);
 
     Path path_3 = Path();
@@ -312,7 +344,7 @@ class BalanceCustomPainter extends CustomPainter {
     path_3.close();
 
     Paint paint_3_fill = Paint()..style = PaintingStyle.fill;
-    paint_3_fill.color = Color(0xff469B88).withOpacity(1.0);
+    paint_3_fill.color = const Color(0xff469B88).withOpacity(1.0);
     canvas.drawPath(path_3, paint_3_fill);
   }
 
@@ -328,7 +360,7 @@ class IncomeCustomPainter extends CustomPainter {
     Paint paint = Paint();
 
     // Path 1
-    paint.color = Color(0xffBFA2CA);
+    paint.color = const Color(0xffBFA2CA);
     Path path1 = Path();
     path1.moveTo(0, 11.8565);
     path1.cubicTo(0, 8.03412, 0, 6.12293, 1.30792, 4.66296);
@@ -351,7 +383,7 @@ class IncomeCustomPainter extends CustomPainter {
     canvas.drawPath(path1, paint);
 
     // Path 2
-    paint.color = Color(0xffF5D8CB);
+    paint.color = const Color(0xffF5D8CB);
     Path path2 = Path();
     path2.moveTo(178.946, 11.8566);
     path2.cubicTo(178.946, 8.03414, 178.946, 6.12293, 180.254, 4.66295);
@@ -374,7 +406,7 @@ class IncomeCustomPainter extends CustomPainter {
     canvas.drawPath(path2, paint);
 
     // Path 3
-    paint.color = Color(0xff242424);
+    paint.color = const Color(0xff242424);
     Path path3 = Path();
     path3.moveTo(24, 1.5);
     path3.cubicTo(24, 12.8218, 14.8218, 22, 3.5, 22);
