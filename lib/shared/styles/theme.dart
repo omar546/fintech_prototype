@@ -10,12 +10,11 @@ class ThemeCubit extends Cubit<ThemeData> {
   static const String themeKey = 'theme';
   ThemeCubit() : super(lightTheme) {
     // only light for now
-    final themeIndex =
-        AppTheme.Light.index;
+    final themeIndex = AppTheme.Light.index;
     // if (themeIndex == AppTheme.Dark.index) {
     //   emit(darkTheme);
     // } else {
-      emit(lightTheme);
+    emit(lightTheme);
     // }
   }
 
@@ -32,14 +31,13 @@ class ThemeCubit extends Cubit<ThemeData> {
   // bool get isDarkTheme => state == darkTheme;
 }
 
-
 ThemeData lightTheme = ThemeData(
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       elevation: 30,
       backgroundColor: Styles.whiteColor,
       type: BottomNavigationBarType.fixed,
       selectedItemColor: Styles.blackColor,
-      unselectedItemColor: Styles.greyColor,
+      unselectedItemColor: Colors.black26,
       selectedLabelStyle: TextStyle(fontFamily: 'quicksand'),
     ),
     appBarTheme: const AppBarTheme(

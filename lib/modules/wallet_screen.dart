@@ -20,18 +20,20 @@ class WalletScreen extends StatelessWidget {
                   pinned: false,
                   floating: true,
                   snap: true,
-                  backgroundColor: Styles.greyColor,
-                  surfaceTintColor: Colors.transparent,
-                  elevation: 0,
+                  backgroundColor: Colors.transparent,
+                  elevation: 0.0,
                   leading: GestureDetector(
-                    onTap: (){AppCubit.get(context).changeBottomNavBarState(3);},
+                    onTap: () {
+                      AppCubit.get(context).changeBottomNavBarState(3);
+                    },
                     child: Padding(
                       padding: const EdgeInsets.all(13.0),
                       child: ClipOval(
                         child: Image.asset(
                           'assets/avatar_147133.png',
                           fit: BoxFit.cover,
-                        ),),
+                        ),
+                      ),
                     ),
                   ),
                   title: const Center(

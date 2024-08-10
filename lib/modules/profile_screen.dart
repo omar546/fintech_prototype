@@ -53,24 +53,36 @@ class ProfileScreen extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: 
-            Column(
+            child: Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    buildProfileButton(action: (){}, icon:Icons.settings, text: 'Settings'),
-                    const SizedBox(width: 20,),
-                    buildProfileButton(action: (){}, icon:Icons.dark_mode, text: 'Theme'),
+                    buildProfileButton(
+                        action: () {}, icon: Icons.settings, text: 'Settings'),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    buildProfileButton(
+                        action: () {}, icon: Icons.dark_mode, text: 'Theme'),
                   ],
                 ),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    buildProfileButton(action: (){}, icon:Icons.support_agent_rounded, text: 'Contact Us'),
-                    const SizedBox(width: 20,),
-                    buildProfileButton(action: (){}, icon: Icons.logout, text: 'Logout',iconColor: Colors.red.withAlpha(200)),
+                    buildProfileButton(
+                        action: () {},
+                        icon: Icons.support_agent_rounded,
+                        text: 'Contact Us'),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    buildProfileButton(
+                        action: () {},
+                        icon: Icons.logout,
+                        text: 'Logout',
+                        iconColor: Colors.red.withAlpha(200)),
                   ],
                 ),
               ],
