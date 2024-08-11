@@ -236,16 +236,16 @@ Widget buildCardsList(List<CardsModel> cards) => Padding(
                           style: const TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
-                        const SizedBox(
-                          height: 25,
+                        SizedBox(
+                          height: MediaQuery.sizeOf(context).height*0.03,
                         ),
                         Text(
                           formatCardNumber(cards[index - 1].number.toString()),
                           style: const TextStyle(
                               fontSize: 12, fontWeight: FontWeight.w400),
                         ),
-                        const SizedBox(
-                          height: 30,
+                        SizedBox(
+                          height: MediaQuery.sizeOf(context).height*0.04,
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.min,
