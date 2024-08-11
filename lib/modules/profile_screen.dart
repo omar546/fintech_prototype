@@ -73,6 +73,24 @@ class ProfileScreen extends StatelessWidget {
                   children: [
                     buildProfileButton(
                         action: () {},
+                        icon: Icons.credit_card_outlined,
+                        text: 'Your Cards'),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    buildProfileButton(
+                        action: () {},
+                        icon: Icons.laptop,
+                        text: 'Your Fees',
+                        ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    buildProfileButton(
+                        action: () {},
                         icon: Icons.support_agent_rounded,
                         text: 'Contact Us'),
                     const SizedBox(

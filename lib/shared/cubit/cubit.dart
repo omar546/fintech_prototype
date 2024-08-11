@@ -26,7 +26,7 @@ class AppCubit extends Cubit<AppStates> {
   List<TransactionModel> transactions = [
     TransactionModel('Adobe Illustrator', 'Subscription fee', -32.00,
         Icons.laptop_rounded, Styles.yellowColor, Styles.yellowShadeColor),
-    TransactionModel('Dribbble', 'Subscription fee', -15.00,
+    TransactionModel('Dribble', 'Subscription fee', -15.00,
         Icons.laptop_rounded, Styles.yellowColor, Styles.yellowShadeColor),
     TransactionModel('House', 'Saving', -50.00, Icons.file_download_outlined,
         Styles.purpleColor, Styles.purpleShadeColor),
