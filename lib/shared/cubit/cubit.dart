@@ -55,10 +55,11 @@ class AppCubit extends Cubit<AppStates> {
 
   //DUMMY CARDS
   List<CardsModel> cards = [
-    CardsModel('Client Name',1234123412343456 , 25000.40, '09/23','visa'),
-    CardsModel('Client Name', 1234123412343456,11000.30, '08/21','mastercard'),
-    CardsModel('Client Name',1234123412343456 , 25000.40, '09/23','visa'),
-    CardsModel('Client Name', 1234123412343456, 2000.10,'05/13','mastercard'),
+    CardsModel('Client Name', 1234123412343456, 25000.40, '09/23', 'visa'),
+    CardsModel(
+        'Client Name', 5555666677778888, 11000.30, '08/21', 'mastercard'),
+    CardsModel('Client Name', 9876987698769876, 25000.40, '09/23', 'visa'),
+    CardsModel('Client Name', 4234123452543555, 2000.10, '05/13', 'mastercard'),
   ];
 
   //NAV

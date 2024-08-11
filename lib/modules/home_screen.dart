@@ -299,71 +299,69 @@ class HomeScreen extends StatelessWidget {
 }
 
 class BalanceCustomPainter extends CustomPainter {
-@override
-void paint(Canvas canvas, Size size) {
+  @override
+  void paint(Canvas canvas, Size size) {
+    Path path_0 = Path();
+    path_0.moveTo(0, 10.4);
+    path_0.cubicTo(0, 4.65624, 4.67532, 0, 10.4426, 0);
+    path_0.lineTo(332.557, 0);
+    path_0.cubicTo(338.325, 0, 343, 4.65624, 343, 10.4);
+    path_0.lineTo(343, 133.6);
+    path_0.cubicTo(343, 139.344, 338.325, 144, 332.557, 144);
+    path_0.lineTo(10.4426, 144);
+    path_0.cubicTo(4.67533, 144, 0, 139.344, 0, 133.6);
+    path_0.lineTo(0, 10.4);
+    path_0.close();
 
-Path path_0 = Path();
-path_0.moveTo(0,10.4);
-path_0.cubicTo(0,4.65624,4.67532,0,10.4426,0);
-path_0.lineTo(332.557,0);
-path_0.cubicTo(338.325,0,343,4.65624,343,10.4);
-path_0.lineTo(343,133.6);
-path_0.cubicTo(343,139.344,338.325,144,332.557,144);
-path_0.lineTo(10.4426,144);
-path_0.cubicTo(4.67533,144,0,139.344,0,133.6);
-path_0.lineTo(0,10.4);
-path_0.close();
+    Paint paint_0_fill = Paint()..style = PaintingStyle.fill;
+    paint_0_fill.color = Color(0xff242424).withOpacity(1.0);
+    canvas.drawPath(path_0, paint_0_fill);
 
-Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
-paint_0_fill.color = Color(0xff242424).withOpacity(1.0);
-canvas.drawPath(path_0,paint_0_fill);
+    Path path_1 = Path();
+    path_1.moveTo(343, 46.4);
+    path_1.cubicTo(330.854, 36.2755, 322.533, 32.9711, 305.246, 32);
+    path_1.cubicTo(310.17, 64.4112, 322.704, 75.6321, 343, 82.4);
+    path_1.lineTo(343, 46.4);
+    path_1.close();
 
-Path path_1 = Path();
-path_1.moveTo(343,46.4);
-path_1.cubicTo(330.854,36.2755,322.533,32.9711,305.246,32);
-path_1.cubicTo(310.17,64.4112,322.704,75.6321,343,82.4);
-path_1.lineTo(343,46.4);
-path_1.close();
+    Paint paint_1_fill = Paint()..style = PaintingStyle.fill;
+    paint_1_fill.color = Color(0xffEBB850).withOpacity(1.0);
+    canvas.drawPath(path_1, paint_1_fill);
 
-Paint paint_1_fill = Paint()..style=PaintingStyle.fill;
-paint_1_fill.color = Color(0xffEBB850).withOpacity(1.0);
-canvas.drawPath(path_1,paint_1_fill);
+    Path path_2 = Path();
+    path_2.moveTo(53.5612, 144);
+    path_2.lineTo(10.4426, 144);
+    path_2.cubicTo(4.67533, 144, 0, 139.344, 0, 133.6);
+    path_2.lineTo(0, 116.404);
+    path_2.cubicTo(3.47143, 115.617, 7.10406, 115.2, 10.8443, 115.2);
+    path_2.cubicTo(31.017, 115.2, 48.0604, 127.341, 53.5612, 144);
+    path_2.close();
 
-Path path_2 = Path();
-path_2.moveTo(53.5612,144);
-path_2.lineTo(10.4426,144);
-path_2.cubicTo(4.67533,144,0,139.344,0,133.6);
-path_2.lineTo(0,116.404);
-path_2.cubicTo(3.47143,115.617,7.10406,115.2,10.8443,115.2);
-path_2.cubicTo(31.017,115.2,48.0604,127.341,53.5612,144);
-path_2.close();
+    Paint paint_2_fill = Paint()..style = PaintingStyle.fill;
+    paint_2_fill.color = Color(0xff469B88).withOpacity(1.0);
+    canvas.drawPath(path_2, paint_2_fill);
 
-Paint paint_2_fill = Paint()..style=PaintingStyle.fill;
-paint_2_fill.color = Color(0xff469B88).withOpacity(1.0);
-canvas.drawPath(path_2,paint_2_fill);
+    Path path_3 = Path();
+    path_3.moveTo(342.457, 6.41451);
+    path_3.cubicTo(342.777, 7.32221, 342.965, 8.29234, 342.996, 9.30167);
+    path_3.lineTo(342.996, 47.1689);
+    path_3.cubicTo(342.996, 47.2996, 342.684, 47.0115, 342.059, 46.4349);
+    path_3.cubicTo(338.659, 43.2946, 325.994, 31.5977, 304.009, 32.4187);
+    path_3.cubicTo(278.538, 33.3699, 255.322, 13.6421, 255.443, 0);
+    path_3.lineTo(333.361, 0);
+    path_3.cubicTo(337.031, 0, 340.221, 2.04236, 341.85, 5.04803);
+    path_3.cubicTo(342.092, 5.53271, 342.293, 5.99542, 342.457, 6.41451);
+    path_3.close();
 
-Path path_3 = Path();
-path_3.moveTo(342.457,6.41451);
-path_3.cubicTo(342.777,7.32221,342.965,8.29234,342.996,9.30167);
-path_3.lineTo(342.996,47.1689);
-path_3.cubicTo(342.996,47.2996,342.684,47.0115,342.059,46.4349);
-path_3.cubicTo(338.659,43.2946,325.994,31.5977,304.009,32.4187);
-path_3.cubicTo(278.538,33.3699,255.322,13.6421,255.443,0);
-path_3.lineTo(333.361,0);
-path_3.cubicTo(337.031,0,340.221,2.04236,341.85,5.04803);
-path_3.cubicTo(342.092,5.53271,342.293,5.99542,342.457,6.41451);
-path_3.close();
+    Paint paint_3_fill = Paint()..style = PaintingStyle.fill;
+    paint_3_fill.color = Color(0xff377CC8).withOpacity(1.0);
+    canvas.drawPath(path_3, paint_3_fill);
+  }
 
-Paint paint_3_fill = Paint()..style=PaintingStyle.fill;
-paint_3_fill.color = Color(0xff377CC8).withOpacity(1.0);
-canvas.drawPath(path_3,paint_3_fill);
-
-}
-
-@override
-bool shouldRepaint(covariant CustomPainter oldDelegate) {
-return true;
-}
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
+  }
 }
 
 class IncomeCustomPainter extends CustomPainter {

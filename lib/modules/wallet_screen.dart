@@ -63,13 +63,13 @@ class WalletScreen extends StatelessWidget {
                 SliverList(
                   delegate: SliverChildListDelegate(
                     [
-                  GestureDetector(
-                    onTap: (){},
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                        child: buildCardsList(AppCubit().cards),
-                    ),
-                  ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: buildCardsList(AppCubit().cards),
+                        ),
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(
                             top: 20, left: 30.0, right: 15),
@@ -81,11 +81,14 @@ class WalletScreen extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 17, fontWeight: FontWeight.bold),
                             ),
-                            IconButton(onPressed: (){}, icon: const Icon(Icons.tune_rounded))
+                            IconButton(
+                                onPressed: () {},
+                                icon: const Icon(Icons.tune_rounded))
                           ],
                         ),
                       ),
                       buildTransactionsList(AppCubit().transactions),
+                      //PLACEHOLDER
                       Container(
                         height: 1000,
                         color: Colors.white24,
