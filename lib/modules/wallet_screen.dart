@@ -2,6 +2,7 @@ import 'package:fintech_prototype/shared/components/widgets.dart';
 import 'package:fintech_prototype/shared/cubit/cubit.dart';
 import 'package:fintech_prototype/shared/cubit/states.dart';
 import 'package:fintech_prototype/shared/styles/colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -62,6 +63,13 @@ class WalletScreen extends StatelessWidget {
                 SliverList(
                   delegate: SliverChildListDelegate(
                     [
+                  GestureDetector(
+                    onTap: (){},
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                        child: buildCardsList(AppCubit().cards),
+                    ),
+                  ),
                       Padding(
                         padding: const EdgeInsets.only(
                             top: 20, left: 30.0, right: 15),

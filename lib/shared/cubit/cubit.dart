@@ -1,3 +1,5 @@
+import 'package:fintech_prototype/models/cards_model.dart';
+import 'package:fintech_prototype/models/earnings_model.dart';
 import 'package:fintech_prototype/models/transactions_model.dart';
 import 'package:fintech_prototype/modules/stats_screen.dart';
 import 'package:fintech_prototype/shared/cubit/states.dart';
@@ -39,6 +41,24 @@ class AppCubit extends Cubit<AppStates> {
         Styles.violetShadeColor),
     TransactionModel('Paypal', 'Salary', 32.00, Icons.credit_card_outlined,
         Styles.greenColor, Styles.greenShadeColor),
+  ];
+
+  //DUMMY EARNINGS
+  List<EarningsModel> earnings = [
+    EarningsModel('Upwork', 3000, Styles.redColor),
+    EarningsModel('Freepik', 3000, Styles.pinkColor),
+    EarningsModel('Envato', 2000, Styles.blueColor),
+    EarningsModel('WWR', 3000, Styles.redColor),
+    EarningsModel('Pexels', 2000, Styles.pinkColor),
+    EarningsModel('Freelancer', 3000, Styles.blueColor),
+  ];
+
+  //DUMMY CARDS
+  List<CardsModel> cards = [
+    CardsModel('Client Name',1234123412343456 , 25000.40, '09/23','visa'),
+    CardsModel('Client Name', 1234123412343456,11000.30, '08/21','mastercard'),
+    CardsModel('Client Name',1234123412343456 , 25000.40, '09/23','visa'),
+    CardsModel('Client Name', 1234123412343456, 2000.10,'05/13','mastercard'),
   ];
 
   //NAV
