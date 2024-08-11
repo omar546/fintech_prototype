@@ -1,3 +1,4 @@
+import 'package:fintech_prototype/shared/components/widgets.dart';
 import 'package:fintech_prototype/shared/cubit/cubit.dart';
 import 'package:fintech_prototype/shared/cubit/states.dart';
 import 'package:fintech_prototype/shared/styles/colors.dart';
@@ -61,6 +62,7 @@ class WalletScreen extends StatelessWidget {
                 SliverList(
                   delegate: SliverChildListDelegate(
                     [
+                      buildTransactionsList(AppCubit().transactions),
                       Container(
                         height: 1000,
                         color: Colors.white24,

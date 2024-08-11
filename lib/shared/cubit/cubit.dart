@@ -1,5 +1,7 @@
+import 'package:fintech_prototype/models/transactions_model.dart';
 import 'package:fintech_prototype/modules/stats_screen.dart';
 import 'package:fintech_prototype/shared/cubit/states.dart';
+import 'package:fintech_prototype/shared/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,6 +21,26 @@ class AppCubit extends Cubit<AppStates> {
     const StatsScreen(),
     const ProfileScreen(),
   ];
+
+  //DUMMY TRANSACTIONS
+  List<TransactionModel> transactions = [
+    TransactionModel('Adobe Illustrator', 'Subscription fee', -32.00,
+        Icons.laptop_rounded, Styles.yellowColor, Styles.yellowShadeColor),
+    TransactionModel('Dribbble', 'Subscription fee', -15.00,
+        Icons.laptop_rounded, Styles.yellowColor, Styles.yellowShadeColor),
+    TransactionModel('House', 'Saving', -50.00, Icons.file_download_outlined,
+        Styles.purpleColor, Styles.purpleShadeColor),
+    TransactionModel(
+        'Sony Camera',
+        'Shopping fee',
+        -200.00,
+        Icons.shopping_bag_outlined,
+        Styles.violetColor,
+        Styles.violetShadeColor),
+    TransactionModel('Paypal', 'Salary', 32.00, Icons.credit_card_outlined,
+        Styles.greenColor, Styles.greenShadeColor),
+  ];
+
   //NAV
   Future<void> changeBottomNavBarState(index) async {
     if (index != currentIndex) {

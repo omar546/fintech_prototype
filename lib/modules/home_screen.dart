@@ -1,3 +1,4 @@
+import 'package:fintech_prototype/shared/components/widgets.dart';
 import 'package:fintech_prototype/shared/cubit/cubit.dart';
 import 'package:fintech_prototype/shared/cubit/states.dart';
 import 'package:fintech_prototype/shared/styles/colors.dart';
@@ -18,8 +19,8 @@ class HomeScreen extends StatelessWidget {
               slivers: [
                 SliverAppBar(
                   pinned: false,
-                  floating: true,
-                  snap: true,
+                  // floating: true,
+                  // snap: true,
                   backgroundColor: Colors.transparent,
                   elevation: 0.0,
                   leading: GestureDetector(
@@ -157,12 +158,15 @@ class HomeScreen extends StatelessWidget {
                           ),
                           Positioned.fill(
                               child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Icon(
-                                Icons.arrow_downward_rounded,
-                                size: 35,
-                                color: Styles.positive,
+                              const Padding(
+                                padding: EdgeInsets.only(right: 8.0),
+                                child: Icon(
+                                  Icons.arrow_downward_rounded,
+                                  size: 35,
+                                  color: Styles.positive,
+                                ),
                               ),
                               const Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -184,15 +188,22 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              Container(
-                                color: Colors.white38,
-                                width: 2,
-                                height: 35,
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 15.0),
+                                child: Container(
+                                  color: Colors.white38,
+                                  width: 2,
+                                  height: 35,
+                                ),
                               ),
-                              const Icon(
-                                Icons.arrow_upward_rounded,
-                                size: 35,
-                                color: Styles.negative,
+                              const Padding(
+                                padding: EdgeInsets.only(right: 8.0),
+                                child: Icon(
+                                  Icons.arrow_upward_rounded,
+                                  size: 35,
+                                  color: Styles.negative,
+                                ),
                               ),
                               const Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -219,40 +230,61 @@ class HomeScreen extends StatelessWidget {
                         ]),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top:20,bottom:20,left: 30.0,right: 15),
-                        child:  Row(mainAxisAlignment:MainAxisAlignment.spaceBetween,children: [
-                          const Text(
-                            'Earnings',
-                            style: TextStyle(
-                                fontSize: 17, fontWeight: FontWeight.bold),
-                          ),
-                          TextButton(onPressed: (){}, child: const Text('See All',style: TextStyle(fontWeight: FontWeight.bold),))
-
-                        ],),
+                        padding: const EdgeInsets.only(
+                            top: 20, bottom: 20, left: 30.0, right: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'Earnings',
+                              style: TextStyle(
+                                  fontSize: 17, fontWeight: FontWeight.bold),
+                            ),
+                            TextButton(
+                                onPressed: () {},
+                                child: const Text(
+                                  'See All',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ))
+                          ],
+                        ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top:20,left: 30.0,right: 15),
-                        child:  Row(mainAxisAlignment:MainAxisAlignment.spaceBetween,children: [
-                          const Text(
-                            'Transactions',
-                            style: TextStyle(
-                                fontSize: 17, fontWeight: FontWeight.bold),
-                          ),
-                          TextButton(onPressed: (){}, child: const Text('See All',style: TextStyle(fontWeight: FontWeight.bold),))
-
-                        ],),
+                        padding: const EdgeInsets.only(
+                            top: 20, left: 30.0, right: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'Transactions',
+                              style: TextStyle(
+                                  fontSize: 17, fontWeight: FontWeight.bold),
+                            ),
+                            TextButton(
+                                onPressed: () {},
+                                child: const Text(
+                                  'See All',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ))
+                          ],
+                        ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(bottom:20,left: 30.0),
+                        padding: EdgeInsets.only(left: 30.0),
                         child: Text(
                           'Today',
                           style: TextStyle(
-                              fontSize: 17,color: Colors.grey, fontWeight: FontWeight.w600),
+                              fontSize: 17,
+                              color: Colors.grey,
+                              fontWeight: FontWeight.w600),
                         ),
                       ),
+                      buildTransactionsList(AppCubit().transactions),
+
+                      //PLACEHOLDER
                       Container(
                         height: 1000,
-                        color: Colors.white24,
+                        color: Styles.greyColor,
                         child: const Center(child: Text('Scroll down')),
                       ),
                     ],
