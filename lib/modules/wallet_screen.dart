@@ -62,6 +62,21 @@ class WalletScreen extends StatelessWidget {
                 SliverList(
                   delegate: SliverChildListDelegate(
                     [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            top: 20, left: 30.0, right: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'Transactions',
+                              style: TextStyle(
+                                  fontSize: 17, fontWeight: FontWeight.bold),
+                            ),
+                            IconButton(onPressed: (){}, icon: const Icon(Icons.tune_rounded))
+                          ],
+                        ),
+                      ),
                       buildTransactionsList(AppCubit().transactions),
                       Container(
                         height: 1000,
