@@ -12,4 +12,4 @@ The goal of this project is to develop a mobile app prototype for a fintech comp
 The UI design screenshots for the home page and wallet page were attached
 
 ## Implementation
-![on git hub show apps](https://github.com/user-attachments/assets/09ea3002-4968-46b7-b899-20a674f88d54)
+![on git hub show apps](https://github.com/user-attachments/assets/10390015-7591-4342-9ab6-60fcce7979c4)
