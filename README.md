@@ -9,7 +9,7 @@ The goal of this project is to develop a mobile app prototype for a fintech comp
 
 ## UI Design
 
-The UI designs for the home page and wallet page are attached to this email. These designs should be followed closely during the implementation process. Additionally, I will create a new design for the user profile page, ensuring it aligns with the overall app theme.
+The UI designs for the home page and wallet page were attached to the email. These designs should be followed closely during the implementation process. Additionally, I will create a new design for the user profile page, ensuring it aligns with the overall app theme.
 
 ## Tasks
 
