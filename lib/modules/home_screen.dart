@@ -249,7 +249,7 @@ class HomeScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      buildEarningsList(AppCubit().earnings),
+                      buildEarningsList(AppCubit.get(context).earnings),
                       Padding(
                         padding: const EdgeInsets.only(
                             top: 20, left: 30.0, right: 15),
@@ -280,7 +280,7 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.w600),
                         ),
                       ),
-                      buildTransactionsList(AppCubit().transactions),
+                      buildTransactionsList(AppCubit.get(context).transactions),
 
                       //PLACEHOLDER
                       Container(

@@ -67,7 +67,7 @@ class WalletScreen extends StatelessWidget {
                         onTap: () {},
                         child: Align(
                           alignment: Alignment.centerLeft,
-                          child: buildCardsList(AppCubit().cards),
+                          child: buildCardsList(AppCubit.get(context).cards),
                         ),
                       ),
                       Padding(
@@ -87,7 +87,7 @@ class WalletScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      buildTransactionsList(AppCubit().transactions),
+                      buildTransactionsList(AppCubit.get(context).transactions),
                       //PLACEHOLDER
                       Container(
                         height: 1000,

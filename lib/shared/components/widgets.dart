@@ -186,130 +186,150 @@ String formatCardNumber(String cardNumber) {
 }
 
 Widget buildCardsList(List<CardsModel> cards) => Padding(
-      padding: const EdgeInsets.only(left: 15.0, top: 30.0, right: 15.0),
-      child: SizedBox(
-        height: 180,
-        child: ListView.separated(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              if (index == 0) {
-                return Padding(
-                  padding:
-                      const EdgeInsets.only(left: 3.0, top: 3.0, bottom: 3.0),
-                  child: Container(
-                    width: 40,
-                    decoration: const BoxDecoration(
-                        color: Styles.whiteColor,
-                        border: DashedBorder.fromBorderSide(
-                            dashLength: 8,
-                            side: BorderSide(
-                                color: Styles.blackColor, width: 2.5)),
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    child: const Icon(Icons.add_circle_rounded),
-                  ),
-                );
-              } else {
-                return Stack(children: [
-                  Visibility(
-                    visible: cards[index - 1].operator == 'visa',
-                    replacement: CustomPaint(
-                        size: const Size(282, 176),
-                        painter: MastercardCustomPainter()),
-                    child: CustomPaint(
-                      size: const Size(282, 176),
-                      painter: VisaCustomPainter(),
+  padding: const EdgeInsets.only(left: 15.0, top: 30.0, right: 15.0),
+  child: SizedBox(
+    height: 180,
+    child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) {
+          if (index == 0) {
+            return Padding(
+              padding: const EdgeInsets.only(left: 3.0, top: 3.0, bottom: 3.0),
+              child: Container(
+                width: 40,
+                decoration: const BoxDecoration(
+                    color: Styles.whiteColor,
+                    border: DashedBorder.fromBorderSide(
+                        dashLength: 8,
+                        side: BorderSide(
+                            color: Styles.blackColor, width: 2.5)),
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                child: const Icon(Icons.add_circle_rounded),
+              ),
+            );
+          } else {
+            return Stack(children: [
+              Visibility(
+                visible: cards[index - 1].operator == 'visa',
+                replacement: CustomPaint(
+                    size: const Size(282, 176),
+                    painter: MastercardCustomPainter()),
+                child: CustomPaint(
+                  size: const Size(282, 176),
+                  painter: VisaCustomPainter(),
+                ),
+              ),
+              Positioned(
+                top: 15,
+                left: 15,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Total Balance',
+                      style: TextStyle(
+                          fontSize: 12, fontWeight: FontWeight.w400),
                     ),
-                  ),
-                  Positioned(
-                    top: 15,
-                    left: 15,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'Total Balance',
-                          style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.w400),
-                        ),
-                        Text(
-                          '\$${currencyFormat.format(cards[index - 1].balance.ceil())}',
-                          style: const TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: MediaQuery.sizeOf(context).height*0.03,
-                        ),
-                        Text(
-                          formatCardNumber(cards[index - 1].number.toString()),
-                          style: const TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.w400),
-                        ),
-                        SizedBox(
-                          height: MediaQuery.sizeOf(context).height*0.04,
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Column(
+                    Text(
+                      '\$${currencyFormat.format(cards[index - 1].balance.ceil())}',
+                      style: const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 30
+                    ),
+                    Text(
+                      formatCardNumber(cards[index - 1].number.toString()),
+                      style: const TextStyle(
+                          fontSize: 12, fontWeight: FontWeight.w400),
+                    ),
+                    const SizedBox(height: 27,),
+                    SizedBox(
+                      width: 355,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Flexible(
+                            flex: 3,
+                            fit: FlexFit.loose,
+                            child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text(
+                                Text(
                                   'Name',
                                   style: TextStyle(
-                                      color: Styles.greyColor,
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w400),
+                                    color: Color(0xfff3f3f3),
+                                    fontSize: 10.0,
+                                    fontWeight: FontWeight.w400,
+                                    height: 1.4,
+                                  ),
                                 ),
                                 Text(
-                                  cards[index - 1].name,
-                                  style: const TextStyle(
-                                      color: Styles.whiteColor,
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold),
+                                  'Client Name',
+                                  style: TextStyle(
+                                    color: Color(0xfffdfffc),
+                                    fontSize: 13.0,
+                                    fontWeight: FontWeight.w700,
+                                    height: 1.4,
+                                  ),
                                 ),
                               ],
                             ),
-                            Flexible(
-                              fit: FlexFit.loose,
-                              child: Container(
-                                width: 140,
-                              ),
-                            ),
-                            Column(
+                          ),
+                          const SizedBox(width: 16.0),
+                          Flexible(
+                            flex: 2,
+                            fit: FlexFit.loose,
+                            child: Container(),
+                          ),
+                          const SizedBox(width: 16.0),
+                          const Spacer(),
+                          const Flexible(
+                            flex: 3,
+                            fit: FlexFit.loose,
+                            child: Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                                const Text(
+                                Text(
                                   'Exp',
                                   style: TextStyle(
-                                      color: Styles.greyColor,
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w400),
+                                    color: Color(0xfff3f3f3),
+                                    fontSize: 10.0,
+                                    fontWeight: FontWeight.w400,
+                                    height: 1.4,
+                                  ),
                                 ),
                                 Text(
-                                  cards[index - 1].exp,
-                                  style: const TextStyle(
-                                      color: Styles.whiteColor,
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold),
+                                  '09/23',
+                                  style: TextStyle(
+                                    color: Color(0xfffdfffc),
+                                    fontSize: 13.0,
+                                    fontWeight: FontWeight.w700,
+                                    height: 1.4,
+                                  ),
                                 ),
                               ],
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ]);
-              }
-            },
-            separatorBuilder: (context, index) {
-              return const SizedBox(
-                width: 12,
-              );
-            },
-            itemCount: cards.length + 1),
-      ),
-    );
+                          ),
+                        ],
+                      ),
+                    )
+
+                  ],
+                ),
+              ),
+            ]);
+          }
+        },
+        separatorBuilder: (context, index) {
+          return const SizedBox(
+            width: 12,
+          );
+        },
+        itemCount: cards.length + 1),
+  ),
+);
+
 
 class MastercardCustomPainter extends CustomPainter {
   @override
