@@ -8,9 +8,7 @@ class MainLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => AppCubit(),
-      child: BlocConsumer<AppCubit, AppStates>(
+    return BlocConsumer<AppCubit, AppStates>(
         listener: (context, state) {},
         builder: (context, state) {
           AppCubit cubit = BlocProvider.of<AppCubit>(context);
@@ -61,7 +59,6 @@ class MainLayout extends StatelessWidget {
                 ),
               ));
         },
-      ),
-    );
+      );
   }
 }

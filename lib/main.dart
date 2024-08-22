@@ -16,7 +16,7 @@ void main() async {
 
   widget = BlocProvider(
     create: (context) => AppCubit(),
-    child: MainLayout(),
+    child: const MainLayout(),
   );
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
